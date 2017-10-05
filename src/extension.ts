@@ -9,10 +9,16 @@ export function activate(context: vscode.ExtensionContext): void {
 
             // Edit
             "C-k", "C-w", "M-w", "C-y", "C-x_C-o",
-            "C-x_u", "C-/",
+            "C-x_u", "C-/", "C-u_-", "C-u_1", "C-u_2", "C-u_3", "C-x_a",
 
             // R-Mode
-            "C-x_r"
+            "C-x_r",
+
+            // Navigation
+            "C-l",
+
+            // Abbrev
+            "enable-abbrev", "disable-abbrev"
         ],
         cursorMoves: string[] = [
             "cursorUp", "cursorDown", "cursorLeft", "cursorRight",
@@ -39,6 +45,7 @@ export function activate(context: vscode.ExtensionContext): void {
     });
 
     // 'type' is not an "emacs." command and should be registered separately
+    // Note: see https://github.com/Microsoft/vscode/issues/5280
     context.subscriptions.push(vscode.commands.registerCommand("type", function (args) {
 		if (!vscode.window.activeTextEditor) {
 			return;

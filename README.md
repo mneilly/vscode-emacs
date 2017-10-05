@@ -1,4 +1,10 @@
-# vscode-emacs
+# Fauxmacs
+
+Fauxmacs is an Emacs mode for Visual Studio Code. It supports common Emacs keybinds as well as the following featurs:
+* regions
+* kill ring
+* rectangles
+* registers
 
 This is emacs like plugin for Visual Studio Code.
 

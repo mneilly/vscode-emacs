@@ -45,9 +45,33 @@ export class Operation {
             'C-g': () => {
                 this.editor.setStatusBarMessage("Quit");
             },
+            'C-l': () => {
+                this.editor.scrollLineToCenterTopBottom()
+            },
             "C-x_r": () => {
                 this.editor.setRMode();
             },
+            "C-x_a": () => {
+                this.editor.setAMode();
+            },
+            "C-u_-": () => {
+                this.editor.setUniversalArg('-');
+            },
+            "C-u_1": () => {
+                this.editor.setUniversalArg('1');
+            },
+            "C-u_2": () => {
+                this.editor.setUniversalArg('2');
+            },
+            "C-u_3": () => {
+                this.editor.setUniversalArg('3');
+            },
+            "enable-abbrev": () => {
+                this.editor.abbrevMode = true;
+            },
+            "disable-abbrev": () => {
+                this.editor.abbrevMode = false;
+            }
         };
     }
 

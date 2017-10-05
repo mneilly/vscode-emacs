@@ -1,13 +1,13 @@
 import * as vscode from 'vscode';
+import { RectangleContent } from './rectangles';
+
+// Support for Emacs registers
+// https://www.gnu.org/software/emacs/manual/html_node/emacs/Registers.html#Registers
 
 export enum RegisterKind {
     KText = 1,
     KPoint = 2,
     KRectangle = 3
-};
-
-export class RectangleContent { // TODO: move it to rectangle.ts eventually.
-    // TBD
 };
 
 export class RegisterContent {
