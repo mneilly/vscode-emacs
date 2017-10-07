@@ -544,7 +544,20 @@ export class Editor
     {
         for (var l = sel.start.line; l < (sel.end.line + 1); l++)
         {
-            builder.insert(new vscode.Position(l, sel.start.character), str);
+            // If line is shorter than the selection start, pad
+            // the line out to selection start
+
+            let lineEnd = vscode.window.activeTextEditor.document.lineAt(l).range.end.character;
+            let paddedStr = str
+
+            if (lineEnd < sel.start.character)
+            {
+                paddedStr = Array(sel.start.character - lineEnd + 1).join(' ') + str
+            }
+
+            // Insert the requested string
+
+            builder.insert(new vscode.Position(l, sel.start.character), paddedStr);
         }
     }
 
