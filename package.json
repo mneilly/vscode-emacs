@@ -42,27 +42,27 @@
 		"commands": [
 			{
 				"command": "emacs.C-k",
-				"title": "Cut the text from cursor to line end and save it in emacs kill ring"
+				"title": "Emacs: Cut the text from cursor to line end and save it in emacs kill ring"
 			},
 			{
 				"command": "emacs.M-w",
-				"title": "Copy selected text to emacs kill ring"
+				"title": "Emacs: Copy selected text to emacs kill ring"
 			},
 			{
 				"command": "emacs.C-w",
-				"title": "Cut selected text to emacs kill ring"
+				"title": "Emacs: Cut selected text to emacs kill ring"
 			},
 			{
 				"command": "emacs.C-y",
-				"title": "Yank (Paste) emacs kill ring"
+				"title": "Emacs: Yank (Paste) emacs kill ring"
 			},
 			{
 				"command": "emacs.enable-abbrev",
-				"title": "Enable abbrev mode"
+				"title": "Emacs: Enable abbrev mode"
 			},
 			{
 				"command": "emacs.disable-abbrev",
-				"title": "Disable abbrev mode"
+				"title": "Emacs: Disable abbrev mode"
 			}
 		],
 		"keybindings": [

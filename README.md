@@ -1,3 +1,5 @@
+This is a fork of hiro-sun vscode-emacs that adds support for rectangles, registers and abbrev and C-l.
+
 # vscode-emacs
 
 vscode-emacs is an Emacs mode for Visual Studio Code. It supports common Emacs keybindings as well as the following features:
@@ -6,7 +8,35 @@ vscode-emacs is an Emacs mode for Visual Studio Code. It supports common Emacs k
 * rectangles
 * registers
 
-This is emacs like plugin for Visual Studio Code.
+### Supported Rectangle Commands
+|Command | Status | Desc |
+|--------|--------|------|
+| `C-x r k`   | OK | Kill the text of the region-rectangle, saving its contents as the last killed rectangle. |
+| `C-x r M-w` | OK | Save the text of the region-rectangle as the last killed rectangle. |
+| `C-x r d`   | OK | Delete the text of the region-rectangle. |
+| `C-x r y`   | OK | Yank the last killed rectangle with its upper left corner at point. |
+| `C-x r o`   | OK | Insert blank space to fill the space of the region-rectangle. This pushes the previous contents of the region-rectangle to the right. |
+| `C-x r N`   | OK | Insert line numbers along the left edge of the region-rectangle. This pushes the previous contents of the region-rectangle to the right. |
+| `C-x r c`   | OK | Clear the region-rectangle by replacing all of its contents with spaces. |
+| `C-x r t string <RET>` | OK | Replace rectangle contents with string on each line. |
+
+### Supported Register Commands
+|Command | Status | Desc |
+|--------|--------|------|
+| `C-x r s r` | OK | Copy region into register r. |
+| `C-x r i r` | OK | Insert text from register r. |
+| `C-x r <SPC> r` | OK | Record the position of point and the current buffer in register r. |
+| `C-x r j r` | OK | Jump to the position and buffer saved in register r. |
+| `C-x r r r` | OK | Copy the region-rectangle into register r. With numeric argument, delete it as well. |
+| `C-x r i r` | OK | Insert the rectangle stored in register r. |
+
+### Abbrev Mode Support
+
+Use C-S-p and search for abbrev to find the enable abbrev mode and disable abbrev mode commands.
+
+|Command | Status | Desc |
+|--------|--------|------|
+| `C-x a g` | Buggy/Incomplete | Set abbrev for prior word (C-u not supported yet) |
 
 ## Operation
 Use `Shift+DEL` to cut to clipboard, the `Ctrl+C` is not overridden.
