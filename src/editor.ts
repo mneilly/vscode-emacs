@@ -563,7 +563,7 @@ export class Editor
 
     numberRectangle = (builder: vscode.TextEditorEdit, sel: vscode.Selection) =>
     {
-        let numLines = sel.end.line - sel.start.line
+        let numLines = sel.end.line - sel.start.line + 1
         let log10NumLines = Math.log10(numLines)
         let numDigits = Math.floor(log10NumLines) + 1
         let pad = Array(numDigits).join(' ')
